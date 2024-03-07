@@ -183,7 +183,7 @@
 
 	</scene>
 
-	<scene name="scene_R0010008" title="EntradaLabs_2piso" onstart="" thumburl="panos/R0010008.tiles/thumb.jpg" lat="18.48793889" lng="-69.96351111" alt="27.89" heading="0.0">
+	<scene name="R0010008" title="EntradaLabs_2piso" onstart="" thumburl="panos/R0010008.tiles/thumb.jpg" lat="18.48793889" lng="-69.96351111" alt="27.89" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
