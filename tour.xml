@@ -279,7 +279,7 @@
 			<cube url="panos/R0010013.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="scene_R0010014" style="hs_circle" ath="160.415" atv="2.011" tag="Ascensor" />
+
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-111.611" atv="7.539" linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
