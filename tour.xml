@@ -46,6 +46,141 @@
 		
 	</action>
 
+	<plugin name="pp_blur" keep="true"
+        url="%VIEWER%/plugins/pp_blur.js"
+        enabled="true"
+        range="0.0"
+        linearrgb="false"
+        order="1"
+        phase="2"
+    />
+
+	<style name="infospot"
+		renderer="webgl"
+		type="text"
+		css="color:#FFFFFF; font-size:16px; font-weight:bold; text-align:center;"
+		width="80" height="80"
+		bgroundedge="42"
+		bgalpha="0.75"
+		bgcolor="0x555555"
+		bgborder="1 0xFFFFFF 1"
+		bgshadow="0 0 16 0x0 0.5"
+		txtshadow="0 0 3 0x0 1.0"
+		mergedalpha="false"
+		vcenter="true"
+		oversampling="2"
+		mipmapping="true"
+		zoom="true"
+		capture="false"
+		/>
+
+	<action name="popup" scope="private:POPUP" args="type, content, width, height, scrollbars, onclose_callback">
+        <![CDATA[
+            if(popup, break(); );
+
+            addlayer('popup_bg', popup_bg);
+            set(popup_bg,
+                type=container,
+                align=lefttop, width=100%, height=100%,
+                zorder=99,
+                handcursor=false,
+                bgcapture=true,
+                capture=false,
+                onclick='popup_close()'
+            );
+
+            addlayer('popup', popup);
+            set(popup,
+                type=container,
+                parent='popup_bg',
+                width=calc(min(width,global.stagewidth*0.9)),
+                height=calc(min(height,global.stageheight*0.8)),
+                align=center,
+                bgcolor=0x555555,
+                bgalpha=0.7,
+                bgshadow='0 10 20 0x000000 0.5',
+                bgcapture=true,
+                maskchildren=false,
+                capture=true,
+                handcursor=false,
+                alpha=0
+            );
+
+            if(type == 'image',
+                set(popup,
+                    bgcolor=0xFFFFFF,
+                    bgalpha=1,
+                );
+                addlayer("popup_image", img);
+                set(img,
+                    url=get(content),
+                    align=center,
+                    width=-20, height=-20,
+                    parent=get(popup.name),
+                    onloaded='popup_imageloaded()'
+                );
+
+                <!-- Agregar hotspots a la imagen específica -->
+                if (content == 'skin/bgblackimage.png',
+                    addhotspot(get(popup.name), additional_hotspot1);
+                    set(additional_hotspot1,
+                        name=button1,
+                        style="skin/button.png",
+                        ath=0,
+                        atv=0
+                        <!-- Define otras propiedades del hotspot según tus necesidades -->
+                    );
+
+                    addhotspot(get(popup.name), additional_hotspot2);
+                    set(additional_hotspot2,
+                        name=button2,
+                        style="skin/button.png",
+                        ath=-50,
+                        atv=-20
+                        <!-- Define otras propiedades del hotspot según tus necesidades -->
+                    );
+                );
+            );
+
+            tween(global.layer[popup].alpha, 1.0);
+        ]]>
+    </action>
+
+	<action name="popup_close" scope="private:POPUP">
+		if (onclose_callback,
+			callback = onclose_callback;
+			onclose_callback = null;
+			scope(global, get(callback) );
+		);
+		
+		set(global.plugin[popup_bg].enabled, false);
+		set(global.events[popup].name, null);
+		tween(global.plugin[pp_blur].range, 0.0);
+		tween(global.layer[popup_bg].bgalpha, 0.0, 0.25);
+		tween(global.layer[popup].alpha, 0.0, 0.25, default,
+			removelayer('popup_bg', true);
+			scope(private:POPUP, delete(popup); );
+		);
+	</action>
+
+
+	<action name="popup_imageloaded" scope="private:POPUP">
+		calc(imgw, caller.imagewidth + 20);
+		calc(imgh, caller.imageheight + 20);
+		calc(maxw, global.stagewidth*0.9);
+		calc(maxh, global.stageheight*0.8);
+		if(imgw GT maxw,
+			calc(imgh, round(imgh * maxw / imgw));
+			copy(imgw, maxw);
+		);
+		if(imgh GT maxh,
+			calc(imgw, round(imgw * maxh / imgh));
+			copy(imgh, maxh);
+		);
+
+		set(global.layer[get(caller.parent)], width=get(imgw), height=get(imgh) );
+	</action>
+
 	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
 	<skin_settings maps="true"
 	               maps_type="google"
@@ -347,51 +482,10 @@
 			<cube url="panos/R0010014.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<action name="open">
-			set(plugin[%1].visible,true);
-			tween(plugin[%1].alpha,1);
-		</action>
-
-		<action name="close">
-			tween(plugin[%1].alpha,0,0.5,default, set(plugin[%1].visible,false) );
-		</action>
-
-		<hotspot name="fyi" 
-             style="skin_hotspotstyle"
-             ath="-40.651" 
-			 atv="-0.054"
-             scale="0.6"
-             alpha="0.3"
-             onover="tween(alpha,1);tween(scale,0.6);"
-             onclick="action(open,openimage);"
+		<hotspot name="spot6" style="infospot"
+		ath="4.517" atv="25.208"
+		onclick="popup('image', 'skin/bgblackimage.png', 600, 400, true);"
 		/>
-
-		<plugin name="openimage"
-				url="skin/bgblackimage.png"
-				align="center" x="10" y="10"
-				alpha="0"
-				visible="false"
-				onclick="action(close,openimage);"
-		>
-			<!-- Botones dentro del plugin openimage -->
-			<plugin name="button1"
-					url="skin/button.png"
-					align="center" x="100" y="100"
-					alpha="1"
-					visible="true"
-					scale="0.1"
-					onclick="loadscene(scene_R0010013);"
-			/>
-
-			<plugin name="button2"
-					url="skin/button.png"
-					align="center" x="200" y="200"
-					alpha="1"
-					visible="true"
-					scale="0.1"
-					onclick="loadscene(scene_R0010013);"
-			/>
-		</plugin>
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-39.651" atv="-0.054" linkedscene="scene_r0010013" linkedscene_hoffset="0.0" use3dtransition="true" />
 
