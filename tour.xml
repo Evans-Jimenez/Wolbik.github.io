@@ -27,7 +27,7 @@
 			url="skin/help_desktop.png" 
 			align="center" y="80" 
 			scale="1"
-			enabled="fasle"
+			enabled="false"
 			alpha="0"
 		/>
 	</layer>
@@ -294,6 +294,52 @@
 		<image prealign="0|0.0|0">
 			<cube url="panos/R0010014.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
+
+		<action name="open">
+			set(plugin[%1].visible,true);
+			tween(plugin[%1].alpha,1);
+		</action>
+
+		<action name="close">
+			tween(plugin[%1].alpha,0,0.5,default, set(plugin[%1].visible,false) );
+		</action>
+
+		<hotspot name="fyi" 
+             style="skin_hotspotstyle"
+             ath="-40.651" 
+			 atv="-0.054"
+             scale="0.6"
+             alpha="0.3"
+             onover="tween(alpha,1);tween(scale,0.6);"
+             onclick="action(open,openimage);"
+		/>
+
+		<plugin name="openimage"
+				url="skin/bgblackimage.png"
+				align="center" x="10" y="10"
+				alpha="0"
+				visible="false"
+				onclick="action(close,openimage);"
+		>
+			<!-- Botones dentro del plugin openimage -->
+			<plugin name="button1"
+					url="skin/button.png"
+					align="center" x="100" y="100"
+					alpha="1"
+					visible="true"
+					scale="0.1"
+					onclick="loadscene(scene_R0010013);"
+			/>
+
+			<plugin name="button2"
+					url="skin/button.png"
+					align="center" x="200" y="200"
+					alpha="1"
+					visible="true"
+					scale="0.1"
+					onclick="loadscene(scene_R0010013);"
+			/>
+		</plugin>
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-39.651" atv="-0.054" linkedscene="scene_r0010013" linkedscene_hoffset="0.0" use3dtransition="true" />
 
