@@ -178,7 +178,7 @@
 		</image>
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="7.916" atv="13.700" linkedscene="scene_r0010006" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="scene_R0010008" style="hs_circle" ath="-166.993" atv="9.944" linkedscene="scene_r0010008" linkedscene_hoffset="0.0" use3dtransition="true" Tag="Entrada de pasillo de laboratorios"/>
+		<hotspot name="scene_R0010008" style="hs_circle" ath="-166.993" atv="9.944" Tag="Entrada de pasillo de laboratorios"/>
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="98.261" atv="6.121" linkedscene="scene_r0010013" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -195,7 +195,7 @@
 			<cube url="panos/R0010008.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="scene_r0010007" style="hs_circle" ath="-18.299" atv="16.917" linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true" Tag="Interseccion Piso 2"/>
+		<hotspot name="scene_r0010007" style="hs_circle" ath="-18.299" atv="16.917" Tag="Interseccion Piso 2"/>
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="-177.885" atv="13.288" linkedscene="scene_r0010009" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -247,7 +247,7 @@
 		</image>
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-19.082" atv="8.977" linkedscene="scene_r0010009" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="scene_r0010012" style="hs_circle" ath="-169.781" atv="10.582" linkedscene="scene_r0010012" linkedscene_hoffset="0.0" use3dtransition="true" Tag="Entrada Laboratorio de Realidad Extendida"/>
+		<hotspot name="scene_r0010012" style="hs_circle" ath="-169.781" atv="10.582" Tag="Entrada Laboratorio de Realidad Extendida"/>
 
 	</scene>
 
@@ -279,7 +279,7 @@
 			<cube url="panos/R0010013.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="scene_R0010014" style="hs_circle" ath="160.415" atv="2.011" linkedscene="scene_r0010014" linkedscene_hoffset="0.0" use3dtransition="true" tag="Ascensor" />
+		<hotspot name="scene_R0010014" style="hs_circle" ath="160.415" atv="2.011" tag="Ascensor" />
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-111.611" atv="7.539" linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
