@@ -46,14 +46,63 @@
 		
 	</action>
 
-	<plugin name="pp_blur" keep="true"
-        url="%VIEWER%/plugins/pp_blur.js"
-        enabled="true"
-        range="0.0"
-        linearrgb="false"
-        order="1"
-        phase="2"
-    />
+	<layer name="bg_ascensor"
+		type="container"
+		keep="true"
+		width="100%"
+		height="100%"
+		bgcolor="0x000000"
+		bgalpha="0.8"
+		zorder="9999"
+		bgcapture="true"
+		visible="false"
+		onclick="close_btns_ascensor()">
+
+		<layer name="btns_ascensor"
+			keep="true"
+			align="center"
+			x="0" y="0"
+			url="skin/bgblackimage.png" 
+			scale="1.0">
+
+			<!-- Layers hijos con acciones -->
+			<layer name="btn1" 
+				url="skin/button.png" 
+				scale="0.05"
+				align="lefttop" 
+				x="10" y="10" 
+				onclick="accion_imagen1()" />
+			<layer name="btn2" 
+				url="skin/button.png"
+				scale="0.05"
+				align="lefttop" 
+				x="50" y="50" 
+				onclick="accion_imagen2()" />
+		</layer>
+	</layer>
+
+	<action name="accion_imagen1">
+		loadscene(scene_R0010005, null, MERGE);
+		close_btns_ascensor();
+	</action>
+
+	<action name="accion_imagen2">
+		loadscene(scene_R0010006, null, MERGE);
+		close_btns_ascensor();
+	</action>
+
+	<action name="open_btns_ascensor">
+		trace("open_btns_ascensor");
+		set(layer[bg_ascensor].visible, true);
+		set(layer[bg_ascensor].capture, true);
+		set(layer[btns_ascensor].onclick, close_btns_ascensor);
+	</action>
+
+	<action name="close_btns_ascensor">
+		set(layer[bg_ascensor].visible, false);
+		set(layer[bg_ascensor].capture, false);
+		set(layer[tour].enabled, true);
+	</action>
 
 	<style name="infospot"
 		renderer="webgl"
@@ -73,113 +122,6 @@
 		zoom="true"
 		capture="false"
 		/>
-
-	<action name="popup" scope="private:POPUP" args="type, content, width, height, scrollbars, onclose_callback">
-        <![CDATA[
-            if(popup, break(); );
-
-            addlayer('popup_bg', popup_bg);
-            set(popup_bg,
-                type=container,
-                align=lefttop, width=100%, height=100%,
-                zorder=99,
-                handcursor=false,
-                bgcapture=true,
-                capture=false,
-                onclick='popup_close()'
-            );
-
-            addlayer('popup', popup);
-            set(popup,
-                type=container,
-                parent='popup_bg',
-                width=calc(min(width,global.stagewidth*0.9)),
-                height=calc(min(height,global.stageheight*0.8)),
-                align=center,
-                bgcolor=0x555555,
-                bgalpha=0.7,
-                bgshadow='0 10 20 0x000000 0.5',
-                bgcapture=true,
-                maskchildren=false,
-                capture=true,
-                handcursor=false,
-                alpha=0
-            );
-
-            if(type == 'image',
-                set(popup,
-                    bgcolor=0xFFFFFF,
-                    bgalpha=1,
-                );
-                addlayer("popup_image", img);
-                set(img,
-                    url=get(content),
-                    align=center,
-                    width=-20, height=-20,
-                    parent=get(popup.name),
-                    onloaded='popup_imageloaded()'
-                );
-
-                <!-- Agregar hotspots a la imagen específica -->
-                if (content == 'skin/bgblackimage.png',
-                    addhotspot(get(popup.name), additional_hotspot1);
-                    set(additional_hotspot1,
-                        name=button1,
-                        style="skin/button.png",
-                        ath=0,
-                        atv=0
-                        <!-- Define otras propiedades del hotspot según tus necesidades -->
-                    );
-
-                    addhotspot(get(popup.name), additional_hotspot2);
-                    set(additional_hotspot2,
-                        name=button2,
-                        style="skin/button.png",
-                        ath=-50,
-                        atv=-20
-                        <!-- Define otras propiedades del hotspot según tus necesidades -->
-                    );
-                );
-            );
-
-            tween(global.layer[popup].alpha, 1.0);
-        ]]>
-    </action>
-
-	<action name="popup_close" scope="private:POPUP">
-		if (onclose_callback,
-			callback = onclose_callback;
-			onclose_callback = null;
-			scope(global, get(callback) );
-		);
-		
-		set(global.plugin[popup_bg].enabled, false);
-		set(global.events[popup].name, null);
-		tween(global.plugin[pp_blur].range, 0.0);
-		tween(global.layer[popup_bg].bgalpha, 0.0, 0.25);
-		tween(global.layer[popup].alpha, 0.0, 0.25, default,
-			removelayer('popup_bg', true);
-			scope(private:POPUP, delete(popup); );
-		);
-	</action>
-
-
-	<action name="popup_imageloaded" scope="private:POPUP">
-		calc(imgw, caller.imagewidth + 20);
-		calc(imgh, caller.imageheight + 20);
-		calc(maxw, global.stagewidth*0.9);
-		calc(maxh, global.stageheight*0.8);
-		if(imgw GT maxw,
-			calc(imgh, round(imgh * maxw / imgw));
-			copy(imgw, maxw);
-		);
-		if(imgh GT maxh,
-			calc(imgw, round(imgw * maxh / imgh));
-			copy(imgh, maxh);
-		);
-
-		set(global.layer[get(caller.parent)], width=get(imgw), height=get(imgh) );
-	</action>
 
 	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
 	<skin_settings maps="true"
@@ -483,8 +425,8 @@
 		</image>
 
 		<hotspot name="spot6" style="infospot"
-		ath="4.517" atv="25.208"
-		onclick="popup('image', 'skin/bgblackimage.png', 600, 400, true);"
+			ath="4.517" atv="25.208"
+			onclick="open_btns_ascensor()"
 		/>
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-39.651" atv="-0.054" linkedscene="scene_r0010013" linkedscene_hoffset="0.0" use3dtransition="true" />
