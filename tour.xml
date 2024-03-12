@@ -1,6 +1,7 @@
 ﻿<krpano version="1.21" title="Edificio AH">
 
 	<include url="skin/vtourskin.xml" />
+	<include url="%VIEWER%/plugins/webvr.xml" />
 	<include url="plugins/circle_hotspots.xml"/>
 
 	<layer name="intro"
