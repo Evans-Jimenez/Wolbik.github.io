@@ -13,6 +13,7 @@
 		zorder="9999"
 		enabled="true"
 		bgcapture="true"
+		vr="true"
 		onloaded="on_intro_loaded()"
 		onclick="on_intro_click()">
 		<layer name="intro_logo" 
@@ -22,6 +23,7 @@
 			scale="0.2"
 			enabled="false"
 			alpha="0"
+			vr="true"
 		/>
 		<layer name="intro_guide" 
 			url="skin/help_desktop.png" 
@@ -29,6 +31,7 @@
 			scale="1"
 			enabled="false"
 			alpha="0"
+			vr="true"
 		/>
 	</layer>
 
@@ -56,6 +59,7 @@
 		zorder="9999"
 		bgcapture="true"
 		visible="false"
+		vr="true"
 		onclick="close_btns_ascensor()">
 
 		<layer name="btns_ascensor"
@@ -63,20 +67,23 @@
 			align="center"
 			x="0" y="0"
 			url="skin/bgblackimage.png" 
-			scale="1.0">
+			scale="1.0"
+			vr="true">
 
 			<!-- Layers hijos con acciones -->
 			<layer name="btn1" 
 				url="skin/button.png" 
 				scale="0.05"
 				align="lefttop" 
-				x="10" y="10" 
+				x="10" y="10"
+				vr="true"
 				onclick="accion_imagen1()" />
 			<layer name="btn2" 
 				url="skin/button.png"
 				scale="0.05"
 				align="lefttop" 
 				x="50" y="50" 
+				vr="true"
 				onclick="accion_imagen2()" />
 		</layer>
 	</layer>
