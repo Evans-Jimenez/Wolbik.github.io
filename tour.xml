@@ -433,7 +433,7 @@
 		</image>
 
 		<hotspot name="spot6" style="infospot"
-			ath="4.517" atv="25.208"
+			ath="4.517" atv="25.205"
 			onclick="open_btns_ascensor()"
 		/>
 
