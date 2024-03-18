@@ -47,69 +47,34 @@
 			tween(layer[intro_logo].alpha, 1);
 			tween(layer[intro_guide].alpha, 1);
 		);
-		
-	</action>
-
-	<layer name="bg_ascensor"
-		type="container"
-		keep="true"
-		width="100%"
-		height="100%"
-		bgcolor="0x000000"
-		bgalpha="0.8"
-		zorder="9999"
-		bgcapture="true"
-		visible="false"
-		vr="true"
-		onclick="close_btns_ascensor()">
-
-		<layer name="btns_ascensor"
-			keep="true"
-			align="center"
-			x="0" y="0"
-			url="skin/bgblackimage.png" 
-			scale="1.0"
-			vr="true">
-
-			<!-- Layers hijos con acciones -->
-			<layer name="btn1" 
-				url="skin/button.png" 
-				scale="0.05"
-				align="lefttop" 
-				x="10" y="10"
-				vr="true"
-				onclick="accion_imagen1()" />
-			<layer name="btn2" 
-				url="skin/button.png"
-				scale="0.05"
-				align="lefttop" 
-				x="50" y="50" 
-				vr="true"
-				onclick="accion_imagen2()" />
-		</layer>
-	</layer>
-
-	<action name="accion_imagen1">
-		loadscene(scene_R0010005, null, MERGE);
-		close_btns_ascensor();
-	</action>
-
-	<action name="accion_imagen2">
-		loadscene(scene_R0010006, null, MERGE);
-		close_btns_ascensor();
 	</action>
 
 	<action name="open_btns_ascensor">
 		trace("open_btns_ascensor");
-		set(layer[bg_ascensor].visible, true);
-		set(layer[bg_ascensor].capture, true);
-		set(layer[btns_ascensor].onclick, close_btns_ascensor);
+		set(hotspot[btns_ascensor].visible, true);
+		set(hotspot[btn_ascensor_1].visible, true);
+		set(hotspot[btn_ascensor_2].visible, true);
+		set(hotspot[spot1].visible, false);
+		tween(hotspot[btns_ascensor].alpha, 1.0, 2.0);
+		tween(hotspot[btn_ascensor_1].alpha, 1.0, 2.0);
+		tween(hotspot[btn_ascensor_2].alpha, 1.0, 2.0);
+		set(hotspot[btns_ascensor].enabled, true);
+		set(hotspot[btn_ascensor_1].enabled, true);
+		set(hotspot[btn_ascensor_2].enabled, true);
 	</action>
 
 	<action name="close_btns_ascensor">
-		set(layer[bg_ascensor].visible, false);
-		set(layer[bg_ascensor].capture, false);
-		set(layer[tour].enabled, true);
+		trace("close_btns_ascensor");
+		tween(hotspot[btns_ascensor].alpha, 0.0, 1.5);
+		tween(hotspot[btn_ascensor_1].alpha, 0.0, 1.5);
+		tween(hotspot[btn_ascensor_2].alpha, 0.0, 1.5);
+		set(hotspot[spot1].visible, true);
+		set(hotspot[btns_ascensor].visible, false);
+		set(hotspot[btn_ascensor_1].visible, false);
+		set(hotspot[btn_ascensor_2].visible, false);
+		set(hotspot[btns_ascensor].enabled, false);
+		set(hotspot[btn_ascensor_1].enabled, false);
+		set(hotspot[btn_ascensor_2].enabled, false);
 	</action>
 
 	<style name="infospot"
@@ -434,8 +399,36 @@
 
 		<hotspot name="spot6" style="infospot"
 			ath="4.517" atv="25.205"
+			enabled="true"
 			onclick="open_btns_ascensor()"
 		/>
+
+		<hotspot name="btns_ascensor"
+			type="image"
+			url="skin/bgblackimage.png"
+			scale="1.0"
+			enabled="false"
+			visible="false"
+			ath="-39.651" atv="-0.054"
+			onclick="close_btns_ascensor();"/>
+		
+		<hotspot name="btn_ascensor_1"
+			type="image"
+			url="skin/button.png"
+			scale="0.05"
+			enabled="false"
+			visible="false"
+			ath="10" atv="10"
+			onclick="loadscene(scene_R0010005, null, MERGE); close_btns_ascensor();"/>
+
+		<hotspot name="btn_ascensor_2"
+			type="image"
+			url="skin/button.png"
+			scale="0.05"
+			enabled="false"
+			visible="false"
+			ath="10" atv="60"
+			onclick="loadscene(scene_R0010006, null, MERGE); close_btns_ascensor();"/>
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-39.651" atv="-0.054" linkedscene="scene_r0010013" linkedscene_hoffset="0.0" use3dtransition="true" />
 
