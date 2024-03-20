@@ -190,7 +190,7 @@
 			<cube url="panos/R0010004.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="4.106" atv="14.551"
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="4.111" atv="14.590"
 			linkedscene="scene_r0010005" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -210,7 +210,7 @@
 			<cube url="panos/R0010005.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="56.660" atv="16.178"
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="56.661" atv="16.213"
 			linkedscene="scene_r0010006" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="-125.500" atv="14.266"
 			linkedscene="scene_r0010004" linkedscene_hoffset="0.0" use3dtransition="true" />
@@ -234,7 +234,7 @@
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-97.428" atv="14.322"
 			linkedscene="scene_r0010005" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="83.257" atv="16.690"
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="83.252" atv="16.665"
 			linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -258,7 +258,7 @@
 			linkedscene="scene_r0010006" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="scene_R0010008" style="hs_circle" ath="-166.993" atv="9.944"
 			Tag="Entrada de pasillo de laboratorios" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="98.261" atv="6.121"
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="98.270" atv="6.186"
 			linkedscene="scene_r0010013" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -269,7 +269,7 @@
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70"
+		<view hlookat="180.886" vlookat="16.688" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70"
 			fovmax="140" limitview="auto" />
 
 		<preview url="panos/R0010008.tiles/preview.jpg" />
@@ -281,7 +281,7 @@
 		<hotspot name="scene_r0010007" style="hs_circle" ath="-18.299" atv="16.917"
 			linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true"
 			Tag="Interseccion Piso 2" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-177.885" atv="13.288"
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-177.879" atv="13.305"
 			linkedscene="scene_r0010009" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -303,9 +303,9 @@
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="10.352" atv="11.466"
 			linkedscene="scene_r0010008" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-14.468" atv="7.346"
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-14.467" atv="7.371"
 			linkedscene="scene_r0010010" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="179.634" atv="8.443"
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="179.642" atv="8.476"
 			linkedscene="scene_r0010011" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -368,7 +368,7 @@
 			<cube url="panos/R0010012.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="50.384" atv="24.201"
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="50.412" atv="24.239"
 			linkedscene="scene_r0010011" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -391,7 +391,7 @@
 		<hotspot name="scene_R0010014" style="hs_circle" ath="160.415" atv="2.011"
 			linkedscene="scene_r0010014" linkedscene_hoffset="0.0" use3dtransition="true"
 			tag="Ascensor" />
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-111.611" atv="7.539"
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-111.587" atv="7.632"
 			linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
