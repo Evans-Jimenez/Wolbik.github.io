@@ -54,10 +54,15 @@
 		set(hotspot[btns_ascensor].visible, true);
 		set(hotspot[btn_ascensor_1].visible, true);
 		set(hotspot[btn_ascensor_2].visible, true);
+		set(hotspot[piso1].visible, true);
+		set(hotspot[piso2].visible, true);
 		set(hotspot[spot1].visible, false);
+		set(hotspot[spot6].visible, false);
 		tween(hotspot[btns_ascensor].alpha, 1.0, 2.0);
 		tween(hotspot[btn_ascensor_1].alpha, 1.0, 2.0);
 		tween(hotspot[btn_ascensor_2].alpha, 1.0, 2.0);
+		tween(hotspot[piso1].alpha, 1.0, 2.0);
+		tween(hotspot[piso2].alpha, 1.0, 2.0);
 		set(hotspot[btns_ascensor].enabled, true);
 		set(hotspot[btn_ascensor_1].enabled, true);
 		set(hotspot[btn_ascensor_2].enabled, true);
@@ -68,13 +73,18 @@
 		tween(hotspot[btns_ascensor].alpha, 0.0, 1.5);
 		tween(hotspot[btn_ascensor_1].alpha, 0.0, 1.5);
 		tween(hotspot[btn_ascensor_2].alpha, 0.0, 1.5);
+		tween(hotspot[piso1].alpha, 0.0, 1.5);
+		tween(hotspot[piso2].alpha, 0.0, 1.5);
 		set(hotspot[spot1].visible, true);
+		set(hotspot[spot6].visible, true);
 		set(hotspot[btns_ascensor].visible, false);
 		set(hotspot[btn_ascensor_1].visible, false);
 		set(hotspot[btn_ascensor_2].visible, false);
 		set(hotspot[btns_ascensor].enabled, false);
 		set(hotspot[btn_ascensor_1].enabled, false);
 		set(hotspot[btn_ascensor_2].enabled, false);
+		set(hotspot[piso1].enabled, false);
+		set(hotspot[piso2].enabled, false);
 	</action>
 
 	<style name="infospot"
@@ -406,29 +416,73 @@
 		<hotspot name="btns_ascensor"
 			type="image"
 			url="skin/bgblackimage.png"
-			scale="1.0"
 			enabled="false"
 			visible="false"
-			ath="-39.651" atv="-0.054"
+			distorted="true"
+			ath="2.49115554013451" atv="21.10202884827530" 
+			scale="1.37499999999999" 
+			depth="1000" 
+			rx="8.50000000000004" 
+			ry="-8.5" rz="0" 
+			ox="0.0" oy="0.0" 
+			tx="0" ty="0" tz="0"
 			onclick="close_btns_ascensor();"/>
 		
 		<hotspot name="btn_ascensor_1"
 			type="image"
 			url="skin/button.png"
-			scale="0.05"
 			enabled="false"
 			visible="false"
-			ath="10" atv="10"
+			distorted="true"
+			ath="-15.64636624573910" atv="4.04220798389400" 
+			scale="0.05" 
+			depth="1000" 
+			rx="0" ry="0" rz="0" 
+			ox="0.0" oy="0.0" 
+			tx="0" ty="0" tz="0"
 			onclick="loadscene(scene_R0010005, null, MERGE); close_btns_ascensor();"/>
 
 		<hotspot name="btn_ascensor_2"
 			type="image"
 			url="skin/button.png"
-			scale="0.05"
 			enabled="false"
 			visible="false"
-			ath="10" atv="60"
+			distorted="true"
+			ath="-16.26301111060354" atv="12.89429933314512" 
+			scale="0.05" 
+			depth="1000" 
+			rx="0" ry="0" rz="0" 
+			ox="0.0" oy="0.0" 
+			tx="0" ty="0" tz="0"
 			onclick="loadscene(scene_R0010006, null, MERGE); close_btns_ascensor();"/>
+
+			<!-- Hotspot para Piso 1 -->
+		<hotspot name="piso1" 
+			type="text"
+			visible="false"
+			text="Piso 1"
+			fontsize="20"
+			distorted="true"
+			ath="-8.03947470406933" atv="4.63218169245819" 
+			scale="1.90499999999998" 
+			depth="1000" 
+			rx="-8.5" ry="4.5" rz="2.9" 
+			ox="0.0" oy="0.0" 
+			tx="0" ty="0" tz="0"/>
+
+		<!-- Hotspot para Piso 2 -->
+		<hotspot name="piso2" style="textspot"
+			type="text"
+			visible="false"
+			text="Piso 2"
+			fontsize="20"
+			distorted="true"
+			ath="-8.47749227552225" atv="13.46372416181435" 
+			scale="1.90499999999998" 
+			depth="1000" 
+			rx="7.5" ry="1.74999999999993" rz="1.85" 
+			ox="0.0" oy="0.0" 
+			tx="0" ty="0" tz="0"/>
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-39.651" atv="-0.054" linkedscene="scene_r0010013" linkedscene_hoffset="0.0" use3dtransition="true" />
 
