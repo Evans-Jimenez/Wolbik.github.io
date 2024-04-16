@@ -660,11 +660,12 @@
 			distorted="true"
 			ath="172.178" atv="31.021" 
 			scale="0.83500000000000" 
-			depth="1250" 
+			depth="1000" 
 			rx="-47.39999999999989" 
 			ry="0" rz="0" 
 			ox="0.0" oy="0.0" 
-			tx="0" ty="0" tz="0"/>
+			tx="0" ty="0" tz="0"
+			width="863px" height="494px"/>
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="172.140" atv="5.954" linkedscene="scene_b01" linkedscene_lookat="2.42,-12.35,120.0" />
 
 	</scene>
