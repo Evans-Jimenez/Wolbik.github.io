@@ -253,7 +253,7 @@
 			<cube url="panos/R0010004.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="4.100" atv="14.611"
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.674" atv="6.054"
 			linkedscene="scene_r0010005" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
@@ -273,14 +273,14 @@
 			<cube url="panos/R0010005.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="56.704" atv="16.359"
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="2.066" atv="10.370"
 			linkedscene="scene_r0010006" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-125.456" atv="14.369"
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-179.123" atv="6.617"
 			linkedscene="scene_r0010004" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
-	<scene name="scene_R0010006" title="Punte_2piso" onstart=""
+	<scene name="scene_R0010006" title="Punto_2piso" onstart=""
 		thumburl="panos/R0010006.tiles/thumb.jpg" lat="18.48780833" lng="-69.96353889" alt="27.89"
 		heading="0.0">
 
@@ -295,10 +295,8 @@
 			<cube url="panos/R0010006.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-97.428" atv="14.322"
-			linkedscene="scene_r0010005" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="83.252" atv="16.665"
-			linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="3.946" atv="7.722" linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-174.608" atv="11.290" linkedscene="scene_r0010005" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
@@ -317,12 +315,12 @@
 			<cube url="panos/R0010007.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="7.951" atv="13.773"
-			linkedscene="scene_r0010006" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="scene_R0010008" style="hs_circle" ath="-166.993" atv="9.944"
-			Tag="Entrada de pasillo de laboratorios" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="98.270" atv="6.186"
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.563" atv="5.739"
 			linkedscene="scene_r0010013" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="98.396" atv="6.278"
+			linkedscene="scene_r0010008" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-91.111" atv="4.460" linkedscene="scene_r0010006" linkedscene_hoffset="0.0" use3dtransition="true" />
+		
 
 	</scene>
 
@@ -341,11 +339,9 @@
 			<cube url="panos/R0010008.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="scene_r0010007" style="hs_circle" ath="-18.299" atv="16.917"
-			linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true"
-			Tag="Interseccion Piso 2" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-177.850" atv="13.307"
-			linkedscene="scene_r0010154" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="16.614" atv="8.217" linkedscene="scene_r0010154" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-179.972" atv="13.064" linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true" />
+
 
 	</scene>
 
@@ -384,8 +380,8 @@
 			<cube url="panos/R0010010.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-167.562" atv="16.340"
-			linkedscene="scene_R0010154" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-100.646" atv="9.409"
+			linkedscene="scene_r0010154" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
@@ -405,12 +401,12 @@
 			<cube url="panos/AHR0010154.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="128.680" atv="23.030"
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="128.806" atv="23.042"
 			linkedscene="scene_r0010008" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="85.745" atv="19.717"
 			linkedscene="scene_r0010010" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="-92.046" atv="4.893"
-			linkedscene="scene_r0010011" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-92.104" atv="4.978"
+			linkedscene="scene_r0010015" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 		<hotspot name="info"
 		type="image"
@@ -458,11 +454,9 @@
 			<cube url="panos/R0010011.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-19.082" atv="8.977"
-			linkedscene="scene_R0010154" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="scene_r0010012" style="hs_circle" ath="-169.781" atv="10.582"
-			linkedscene="scene_r0010012" linkedscene_hoffset="0.0" use3dtransition="true"
-			Tag="Entrada Laboratorio de Realidad Extendida" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-48.150" atv="8.810"
+			linkedscene="scene_r0010012" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="85.695" atv="19.463" linkedscene="scene_r0010015" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
@@ -481,7 +475,7 @@
 			<cube url="panos/R0010012.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="50.412" atv="24.239"
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="28.916" atv="7.152"
 			linkedscene="scene_r0010011" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 		<hotspot name="video"
@@ -490,14 +484,14 @@
 			posterurl="videos/poster_RealidadAumentada.png"
 			pausedonstart="true"
 			distorted="true"
-			ath="-99.52257112067116" 
-			atv="-14.25719522741592" 
+			ath="-85" 
+			atv="-14" 
 			scale="0.36650" 
 			depth="1000" 
-			rx="-9.70000000000002" 
-			ry="19.00000000000014" 
-			rz="-0.950" 
-			ox="0.0" oy="0.0" tx="-10.50" 
+			rx="-10" 
+			ry="10.00000000000014" 
+			rz="1" 
+			ox="0.0" oy="0.0" tx="-8.50" 
 			ty="0" tz="0"
 			loop="false"
 			volume="1.0"
@@ -513,8 +507,8 @@
 			text="Creditos: @EducarPortal"
 			fontsize="20"
 			distorted="true"
-			ath="-99.63699330340296" 
-			atv="2.00072162560588" 
+			ath="-84.637" 
+			atv="2.001" 
 			scale="1.90499999999998" 
 			depth="1000" 
 			rx="-8.200" ry="10.90000000000001" rz="3.10" 
@@ -540,11 +534,8 @@
 			<cube url="panos/R0010013.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
-		<hotspot name="scene_R0010014" style="hs_circle" ath="160.415" atv="2.011"
-			linkedscene="scene_r0010014" linkedscene_hoffset="0.0" use3dtransition="true"
-			tag="Ascensor" />
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-111.587" atv="7.632"
-			linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="7.850" atv="15.623" linkedscene="scene_r0010014" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="80.577" atv="9.277" linkedscene="scene_r0010007" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 	<scene name="scene_R0010014" title="Ascensor" onstart="" thumburl="panos/R0010014.tiles/thumb.jpg" lat="18.48797500" lng="-69.96347222" alt="27.50" heading="0.0">
@@ -637,6 +628,49 @@
 			tx="0" ty="0" tz="0"/>
 
 		
+
+	</scene>
+	<scene name="scene_R0010015" title="Laboratorio obstetricia y ginecología" onstart="" thumburl="panos/R0010015.tiles/thumb.jpg" lat="18.48796389" lng="-69.96354444" alt="23.39" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/R0010015.tiles/preview.jpg" />
+
+		<image prealign="0|0.0|0">
+			<cube url="panos/R0010015.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
+		</image>
+	
+	<hotspot name="info"
+		type="image"
+		url="recursos/icono_info.png"
+		ath="-19.157" 
+		atv="-5.854"
+		scale="0.111400" 
+		depth="1000" 
+		rx="0" ry="0" rz="0" 
+		ox="0.0" oy="0.0" 
+		tx="0" ty="0" tz="0"
+		distorted="true"
+		onclick="tween(hotspot[image_text].alpha, 1, 0.5); set(hotspot[image_text].enabled, true);"/>
+
+		<hotspot name="image_text"
+		type="image"
+		url="recursos/Laboratorio_obstetricia_y_ginecología.png"
+		ath="12.625" 
+		atv="-5.394" 
+		scale="0.53" 
+		depth="1000" 
+		rx="-4" ry="-8." rz="3.5" 
+		ox="0.0" oy="0.0" 
+		tx="0" ty="0" tz="0"
+		alpha="0"
+		enabled="false"
+		distorted="true"
+		onclick="tween(hotspot[image_text].alpha, 0, 0.5); set(hotspot[image_text].enabled, false);"/>
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-88.285" atv="11.844" linkedscene="scene_r0010011" linkedscene_lookat="-350.98,6.64,120.0" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="95.274" atv="13.399" linkedscene="scene_r0010154" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
